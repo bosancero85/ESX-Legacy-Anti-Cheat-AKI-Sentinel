@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body { background:#000; color:#0ff; font-family:monospace; }
+.card { border:1px solid #0ff; margin:10px; padding:10px; }
+.red { color:red; }
+.green { color:lime; }
+</style>
+</head>
+<body>
+
+<h1>AKI Sentinel Final</h1>
+<div id="out"></div>
+
+<script>
+const ws = new WebSocket("ws://localhost:3000");
+const players = {};
+
+ws.onmessage = e => {
+    const d = JSON.parse(e.data);
+    players[d.data.player] = d.data;
+    render();
+};
+
+function render(){
+    const out = document.getElementById("out");
+    out.innerHTML = "";
+
+    Object.values(players).forEach(p => {
+        const c = p.risk > 20 ? "red" : "green";
+
+        out.innerHTML += `
+        <div class="card ${c}">
+            <h3>${p.player}</h3>
+            Risk: ${p.risk}<br>
+            Type: ${p.type}<br>
+            Action: ${p.action}
+        </div>`;
+    });
+}
+</script>
+
+</body>
+</html>
