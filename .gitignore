@@ -1,0 +1,54 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Logs
+*.log
+audit.log
+report.txt
+
+# Environment
+.env
+.env.local
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.env/
+.Python
+
+# ML / Temp
+*.npy
+*.pkl
+*.model
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# FiveM Cache (falls lokal getestet)
+cache/
+server-data/cache/
+
+# Build / Temp Files
+dist/
+build/
+tmp/
+
+# Dashboard local overrides
+dashboard/.env
+
+# Optional: sensitive configs
+config.local.lua
