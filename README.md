@@ -73,37 +73,6 @@ It evaluates behavior and answers one question:
 
 MIT License
 
-Directory Structure:
-
-''' 
-aki_sentinel/
-│
-├── fivem/
-│   ├── fxmanifest.lua
-│   ├── config.lua
-│   └── server/
-│       ├── main.lua
-│       ├── aim.lua
-│       ├── bridge.lua
-│
-├── backend/
-│   ├── package.json
-│   ├── server.js
-│   ├── api.js
-│   ├── core/
-│   │   ├── state.js
-│   │   ├── classifier.js
-│   │   ├── decision.js
-│   │   ├── audit.js
-│   │   └── ml.js
-│
-├── ml/
-│   └── ml_engine.py
-│
-└── dashboard/
-    └── index.html
-'''
-
 # ####################################
 #    
 #    START
@@ -137,24 +106,3 @@ python ml_engine.py
 '''
 dashboard/index.html
 '''
-
-GITHUB TAGS
-
-fivem
-esx
-fivem-anticheat
-gta5
-anticheat
-lua
-nodejs
-python
-machine-learning
-anomaly-detection
-websocket
-dashboard
-realtime
-game-security
-aimbot-detection
-behavior-analysis
-cheat-detection
-open-source
